@@ -1,0 +1,18 @@
+// HolaMundo.cpp : Defines the entry point for the console application.
+// Autor: 
+// Fecha: 
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+int main() 
+{
+	cout <<"Mas sabe el diablo por viejo que por diablo \n \n";
+	cout <<"A caballo regalado no se lo miran los dientes";
+    getch ();	
+    return 0;
+}
