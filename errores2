@@ -1,0 +1,24 @@
+// errores2.cpp : Defines the entry point for the console application.
+// autor:  Jorge Andre ARduz Hoyos
+// fecha: 25 de febrero del 2014
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main() {
+     
+     float base, altura,area;
+	 cout<<"        calculo del area del triangulo \n\n";
+	 cout<<"ingrese altura: ";
+     cin>>altura;
+     cout<<"ingrese base: ";
+     cin>>base;
+
+     area = (base*altura)/2;
+	 cout<<"el area es: ";
+     cout<<area;
+	 getch();
+}
