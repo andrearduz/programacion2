@@ -1,0 +1,32 @@
+// burbuja.cpp : Defines the entry point for the console application.
+//Nombre: jorge andre arduz hoyos
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+void burbuja (int a[], int tam);
+int main()
+
+{
+	int b[20]={1,2,3,2,4,3,5,6,3,7,8,9,4,5,3,5,3,4,5,6};
+	burbuja(b,20);
+		for(int i=0; i<20;i++)
+			cout<<b[i];
+	getch();
+}
+	void burbuja( int a[], int tam)
+	{
+for (int i=0;i<tam-1;i++)
+for (int j=i; j<tam;j++)
+if (a[i]>a[j])
+{
+int temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+	}
