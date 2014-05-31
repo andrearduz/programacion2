@@ -1,0 +1,42 @@
+// serie.cpp : Defines the entry point for the console application.
+// nombre: jorge andre arduz hoyos
+// fecha: 13 mayo 2014
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+
+int factorial (int numero);
+int potencia (float bese, int exponente);
+
+void main()
+{
+	int n,x,i;
+	float suma;
+	cout<<"ingrese x:";
+	cin>>x;
+	cout<<"ingrese n:";
+	cin>>n;
+	suma=0;
+	for(int i=1; i<=n;i++)
+		suma=suma + potencia (x,i)/factorial(i);
+	cout<<"el resultado es:"<<suma;
+	getch();
+}
+int factorial (int numero)
+{
+ int fact=1;
+ for (int i=1;i<=numero;i++)
+ fact=fact*1;
+ return fact;
+}
+int potencia(float base,int exponente)
+{
+ float pot=1;
+ for (int i=1;i<=exponente;i++)
+		pot=pot*base;
+ return pot;
+}
