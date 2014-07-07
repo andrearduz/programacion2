@@ -1,0 +1,35 @@
+/*---------------------------------------------------------
+Programa:     hola.cpp
+Version:      V1
+fecha:        7/4/14
+Autor:        Jorge Arduz
+Obs:          Manda un saludo
+Funciones:    
+----------------------------------------------------------*/
+
+#include "stdafx.h"  // funciones basicas del Exp. Ed
+#include "conio.h"   //manejo consolas
+#include "stdlib.h"  //para llamar al sistema operativo (S.O.) Windows
+#include "stdio.h"   //estandar Inpu Output
+
+
+void main() 
+
+{ char nom[15], apell[15];
+  int a,b,suma;
+  printf("\n Ingrese su nombre:  ");
+  scanf("%s",&nom);
+  printf("\n Ingrese su Apellido:  ");
+  scanf("%s", &apell);
+  printf("Ingrese un numero:  ");
+  scanf("%d", &a);
+  printf("Ingrese otro numero:  ");
+  scanf("%d", &b);
+  printf("\n Hola %s  %s\n\n",nom,apell);  //toda instruccion termina con ;
+  suma = a + b;
+  printf("\n La suma de %d + %d = %d",a,b,suma);
+  printf("\n\n");
+  system("pause");
+  
+	
+}
