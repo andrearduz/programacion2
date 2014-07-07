@@ -1,0 +1,28 @@
+/*---------------------------------------------------------
+Programa:     circulo.cpp
+Version:      V1
+fecha:        7/7/14
+Autor:        Jorge Andre Arduz
+Obs:          Calcula el perimetro u area de un circulo. lee el Radio
+    
+----------------------------------------------------------*/
+
+#include "stdafx.h"  // funciones basicas del Exp. Ed
+#include "conio.h"   //manejo consolas
+#include "stdlib.h"  //para llamar al sistema operativo (S.O.) Windows
+#include "stdio.h"   //estandar Inpu Output
+
+#define Pi 3.14159  // variable sin = in ;
+
+
+void main() 
+
+{ float Radio, Area, Perimetro;
+  printf("\n\n\t  Ingrese el Radio del circulo; ");   // t = lleva a la derecha el cursor
+  scanf("%f", &Radio);
+  Area = Pi * Radio * Radio;
+  Perimetro = Pi *2 * Radio;
+  printf("\n el area del circulo es %f", Area);
+printf("\n el perimetro del circulo es %f\n\n", Perimetro);
+  system("pause");
+}
