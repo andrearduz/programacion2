@@ -1,0 +1,55 @@
+Enter file contents here/* ---------------------------------------------------------------------------------------------------------------------------------------
+Programa:       hora.cpp 
+Version:        V1
+Fecha:          10/7/14
+Autor:          Jorge Andre Arduz
+Obs:            Ingresando el Diametro calcula la circunferencia, area y volumen
+-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+
+
+void main()
+{int H1, M, S, H2;
+  int cont;
+  do
+  {
+   do
+   {printf ("\n Ingrese la Hora [HH]");
+    scanf ("%d", &H1);
+   }while(H1 <= 0 || H1 > 23);
+   do
+   {printf ("\n Ingrese los Minutos [MM]");
+    scanf ("%d", &M);
+    }while(H1 <= 0 || M > 59);
+   do
+    {printf ("\n Ingrese los Segundos [SS]");
+    scanf ("%d", &S);
+    }while(H1 <= 0 || S > 59);
+  if(H1>12)
+   {H2 = H1 - 12;
+    printf("la hora es %d - %d - %d PM",H2,M,S);
+   }
+  else
+   {if(H1 == 12)
+      {printf("la hora de %d - %d - %d PM",H1,M,S);
+      }
+     else
+	  {printf("la hora es %d - %d - %d AM",H2,M,S);
+      }
+    }
+
+
+ printf("\n\n\n DESEA CONTINUAR? [ SI ->1]= ");
+   scanf("%d", &cont);
+  }while(cont==1);
+
+ 
+
+
+system("pause");
+}
