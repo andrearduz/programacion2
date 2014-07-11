@@ -1,0 +1,33 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------
+Programa:       segundos.cpp 
+Version:        V1
+Fecha:          11/7/14
+Autor:          Jorge Andre Arduz
+Obs:            Caulculo hora,minuto,segundo
+-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "math.h"
+
+void main()
+{int H,M,S,SO, cont;
+ do
+ {system("cls"); system("color f5");
+  do
+   {printf("\n\n Ingrese los segundos:  ");
+    scanf("%d",&S);
+   }while(S<=0);
+   SO = S;
+   H = S/3600;
+   S = S%3600;
+   M = S/60;
+   S = S%60;
+   printf("\n\n Los %d segundos dan",SO);
+   printf("\n\n %d Horas de %d Minutos %d Segundos",H,M,S);
+   printf("\n\n Desea continuar [1->Si]");
+   scanf("%d", &cont);
+ }while (cont==1);
+}
