@@ -1,0 +1,36 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------
+Programa:       invertir.cpp 
+Version:        V1
+Fecha:          11/7/14
+Autor:          Jorge Andre Arduz
+Obs:            Caulculo invertir un numero
+-----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "math.h"
+
+
+void main ()
+{int N, R, IN, NO, cont;
+ do
+ {system("cls"); system("color f5");
+  do
+  {printf("\n\n Ingrece un numero:  ");
+   scanf("%d", &N);
+  }while(N<=0);
+ NO = N;
+ IN = 0;
+ while(N>0)
+   {R = N%10;
+    N = N/10;
+	IN = IN*10+R;
+   }
+ printf("\n\ el invertido de %d es %d",NO,IN);
+
+ printf("\n\n desea continuar [1-> Si]");
+ scanf("%d", &cont);
+ }while(cont==1);
+}
