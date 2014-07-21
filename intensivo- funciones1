@@ -1,0 +1,40 @@
+// funciones1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+
+float Area(float base, float altura);
+
+void main()
+{float B,H,A,cont;
+do
+{do
+ {printf("\n\n ingrese la base del triangulo ");
+  scanf("%f", &B);
+ }while(B<=0);
+ do 
+ { printf("\n\n ingrese la altura del triangulo ");
+ scanf("%f", &H);
+ }while(H<=0);
+
+ //llamada a una funcion clacula el area
+ A = Area(B,H);
+
+ printf ("\n\n el area del triangulo de base %f",B);
+ printf ("\n\n y altura %f es %f",H,A);
+
+ printf("\n\n");
+ printf("\n\n desea continuar [1 -> Si]");
+ scanf("%d", &cont);
+}while(cont == 1);
+}
+float Area(float base, float altura)
+{float Area;
+Area = base * altura / 2;
+return(Area);
+}
+
