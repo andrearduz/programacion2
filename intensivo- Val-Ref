@@ -1,4 +1,5 @@
-// val--ref.h
+// Val_Ref.cpp : Defines the entry point for the console application.
+//
 
 #include "stdafx.h"
 #include "conio.h"
@@ -15,7 +16,7 @@ void main()
 A = leer();
 B = leer();
 MAYOR = comparar(A,B);
-printf("\n el mayor entre %d y %d es  %d",A,B,MAYOR);
+printf("\n el mayor entre %d y %d es %d",A,B,MAYOR);
 system("pause");
 //por REFERENCIA-------------------------------------
 Rleer(&A);
@@ -26,7 +27,7 @@ system("pause");
 }
 int leer()
 {int x;
-printf("\n ingrese un entero:  ");
+printf("\n ingrese un entero: ");
 scanf("%d",&x);
 return(x);
 }
@@ -46,4 +47,5 @@ void Rcomparar(int *n, int*m, int *may)
 {if(*n > *m) *may = *n;
 else *may = *m;
 }
+
 
