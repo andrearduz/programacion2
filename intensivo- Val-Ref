@@ -1,0 +1,49 @@
+// val--ref.h
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+
+int leer ();
+int comparar(int n, int m);
+void Rleer(int *a);
+void Rcomparar(int *n, int *m, int *may);
+void main()
+{int A, B, MAYOR;
+A = leer();
+B = leer();
+MAYOR = comparar(A,B);
+printf("\n el mayor entre %d y %d es  %d",A,B,MAYOR);
+system("pause");
+//por REFERENCIA-------------------------------------
+Rleer(&A);
+Rleer(&B);
+Rcomparar(&A,&B,&MAYOR);
+printf("\n\n el mayor entre %d y %d es %d",A,B,MAYOR);
+system("pause");
+}
+int leer()
+{int x;
+printf("\n ingrese un entero:  ");
+scanf("%d",&x);
+return(x);
+}
+int comparar(int n, int m)
+{int May;
+if(n>m)
+{May = n;}
+else
+{May = m;}
+return(May);
+}
+void Rleer(int *a)
+{printf("\n\n ingrese un entero ");
+scanf("d", a);
+}
+void Rcomparar(int *n, int*m, int *may)
+{if(*n > *m) *may = *n;
+else *may = *m;
+}
+
