@@ -1,0 +1,49 @@
+// REFEREN.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include "math.h"
+
+/*
+int Comparar(int n,int m)
+{int May;
+if (n>m){May = n;}
+else {May = m;}
+return (May);
+}
+
+void RLeer(int *a)
+{printf ("\n\n Ingrese un Entero: ");
+scanf ("%d",a);
+}
+
+void main()
+{int May,a,b;
+RLeer(&a);
+RLeer(&b); 
+May = Comparar(a,b);
+printf("\n El numero mayor de %d y %d es: %d \n",a,b,May);
+system ("pause");
+}
+*/
+void RLeer(int *N)
+{printf ("\n\n Ingrese el numero N: ");
+scanf ("%d",N);
+}
+void Fac(int *N,int *fac)
+{*fac=1;
+for (int i=1;i<=*N;i++)
+	{*fac=*fac*i;
+	}
+}
+
+void main()
+{int N,fac;
+RLeer(&N);
+Fac(&N,&fac);
+printf ("El factorial de %d numeros es: %d \n",N,fac);
+getch();
+}
