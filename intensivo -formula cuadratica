@@ -1,0 +1,31 @@
+void leer(float *n);
+void sol(float *a, float *b, float *c, float *x1, float *x2);
+
+void main()
+{float a, b, c, x1, x2;
+ do
+ {printf("\n Ingrese a:  ");
+   leer(&a);
+   if(a==0) printf("\n Ingrese a !=0");
+  }while(a==0);
+ printf("\n Ingrese b:  ");
+ leer(&b);
+ printf("\n Ingrese c:   ");
+ leer(&c);
+ if(b*b - 4*a*c < 0)
+ {printf("\n\n No tiene solucion real");
+ }
+ else
+ {sol(&a,&b,&c,&x1,&x2);
+  printf("\n\n soluciones %f  %f ",x1, x2);
+ }
+getch();
+
+}
+void leer(float *n)
+{ scanf("%f", n);
+}
+void sol(float *a, float *b, float *c, float *x1, float *x2)
+{*x1 = (-*b + sqrt(pow(*b,2)-(4 * *a * *c)))/(2* *a);
+ *x2 = (-*b - sqrt(pow(*b,2)-(4 * *a * *c)))/(2* *a);
+}
