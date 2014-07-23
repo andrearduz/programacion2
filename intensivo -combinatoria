@@ -1,0 +1,45 @@
+// combina.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+
+void Leern(int *n);
+void Leerm(int *m, int *n);
+void fac(int *a, int *f);
+
+void main()
+{int n, m, f, fn, fm, fnm,Com, d;
+ Leern(&n);
+ Leerm(&m, &n);
+ fac(&n, &fn);
+ fac(&m, &fm);
+ d= n - m;
+ fac(&d, &fnm);
+ Com = fn/(fm*fnm);
+ printf("\n\n el combinatoro es  %d", Com);
+ getch();	
+}
+void Leern(int *n)
+{do
+  {printf("\n\n Ingrese n:  ");
+   scanf("%d", n);
+  }while(*n < 2);
+}
+
+void Leerm(int *m, int *n)
+{do
+  {printf("\n\n Ingrese m:  ");
+   scanf("%d", m);
+  }while(*m < 2 || *m > *n);
+}
+
+void fac(int *a, int *f)
+{*f=1;
+  for(int i = 1; i<= *a; i++)
+    { *f = *f * i;
+    }
+
+}
