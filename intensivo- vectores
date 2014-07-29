@@ -1,0 +1,62 @@
+// vectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#define N 10
+
+void Leer(int A[N]);
+void SumaPares(int A[N], int *S);
+void MayDifCons(int A[N]);
+//void MayDifTot(int A[N]);
+
+void main()
+{int A[N]={'\0'},S, Cont;
+ do
+  {Leer(A);
+   SumaPares(A, &S);
+   MayDifCons(A);
+  // MayDifTot(A);
+   printf("\n\n Desea Continuar [1-> Si]");
+   scanf("%d", &Cont);
+  }while(Cont == 1);
+}
+void Leer(int A[N])
+{printf("\nIngrese %d Numeros Enteros: ",N);
+ for(int c=0;c<N;c++)
+   {printf("\n Vec[%d] = ",c+1);
+    scanf("%d", &A[c]);
+   }
+}
+
+void SumaPares(int A[N], int *S)
+{*S=0;
+ for(int c=0;c<N;c++)
+   {if(A[c]%2==0)
+     {*S = *S + A[c];
+     }
+   }
+ printf("\n\n la suama de los pares = %d", *S);
+}
+void MayDifCons(int A[N])
+{int Dif, Dif1,pos,c;
+ if (A[0]>A[1]) Dif = A[0]-A[1];
+ else Dif = A[1]-A[0];
+ for(int c=0;c<N-1;c++)
+   {if (A[c]>A[c+1])
+      {Dif1 = A[c]-A[c+1];
+      }
+    else 
+	  {Dif1 = A[c+1]-A[c];
+      }
+    if(Dif1 > Dif)
+	  {Dif = Dif1;
+	   pos = c;
+	  }
+ }
+ printf("\n\n La mayor diferencia es %d en la pos %d",Dif,pos);
+}
+//void MayDifTot(int A[N])
+//{
+//}
