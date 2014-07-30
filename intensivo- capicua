@@ -1,0 +1,53 @@
+// asdfasdfjd.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#define tv 1000
+
+
+void leer (int v[tv], int a);
+void invertir (int v[tv], int b[tv], int n);
+void mostrardoble (int v[tv], int b[tv], int n);
+void mostr (int v[tv], int n);
+
+void main ()
+{int n, v[tv],b[tv];
+do{printf("\n ingrese tamaño del vector:    ");
+scanf("%d", &n);} while(n<=0);
+leer(v,n);
+mostr(v,n);
+invertir(v,b,n);
+mostrardoble (v,b,n);
+getch();
+}
+
+void leer (int v[tv], int a)
+{for (int i=0;i<a;i++)
+{printf("\n introduzca valor de v[%d]  ", i+1);
+scanf("%d", &v[i]);}
+}
+
+void invertir (int v[tv], int b[tv], int n)
+{int d=n-1;
+for(int i=0;i<n;i++)
+{b[d] = v[i] ;
+d=d-1;}
+}
+
+void mostrardoble (int v[tv], int b[tv], int n)
+{int d=n-1;
+	for(int i=0;i<n; i++)
+{printf("\n v[%d] = %d    y    b[%d] = %d \n", i+1, v[i], d+1
+		, b[d]);
+	d=d-1;}
+}
+
+void mostr (int v[tv], int n)
+{	for(int i=0;i<n; i++)
+{printf("\n v[%d] = %d ", i+1, v[i]);
+}printf("\n");
+}
+
