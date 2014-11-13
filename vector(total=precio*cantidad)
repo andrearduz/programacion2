@@ -1,0 +1,52 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define TAM 100
+
+using namespace std;
+
+void leer_vec(int vec[], int n);
+void calculo_total_vector(int total[],int precio[],int cantidad[],int n);
+void mostrar_vec(int total[],int n);
+void main()
+
+{
+  int v[TAM],n,i,t[TAM],p[TAM],c[TAM];
+  do{
+  cout<<"Ingrese el numero de elementos: ";
+  cin>>n; 
+  }while ((n>TAM)||(n<0));
+
+  cout<<"Ingrese precios: \n";
+  leer_vec(p,n);
+  cout<<"Ingrese cantidad: \n";
+  leer_vec(c,n);
+  calculo_total_vector(t,p,c,n);
+  cout<<"El total es: \n";
+  mostrar_vec(t,n);
+  getch();
+}
+void leer_vec(int vec[], int n)
+{
+	for(int i=0;i<n;i++)
+	{
+		cout<<"["<<i<<"]= ";
+		cin>>vec[i];
+	}
+}
+void mostrar_vec(int total[],int n)
+{
+    for(int i=0;i<n;i++)
+	{
+		cout<<"["<<i<<"]= ";
+		cout<<total[i]<<"\n";
+	}
+}	
+void calculo_total_vector(int total[],int precio[],int cantidad[],int n)
+{
+	for (int i=0;i<n;i++)
+	{
+		total[i]=precio[i]*cantidad[i];
+		
+	}
+}
