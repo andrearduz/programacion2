@@ -1,0 +1,54 @@
+// vector(incremento10%)13-11-2014.cpp : Defines the entry point for the console application.
+// 
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+#define TAM 100
+using namespace std;
+
+void leer_vector (int vec[], int n);
+void mostrar_vector(int vec[],int n);
+void incremento_vector(int vec[],int n);
+void main()
+{
+	int v[TAM],n;
+do
+{
+	cout<<"ingrese el numero de elementos";
+	cin>>n;
+}while ((n>TAM)||(n<=0));
+  leer_vector(v,n);
+  incremento_vector(v,n);
+  mostrar_vector(v,n);
+  getch();
+}
+void leer_vector (int vec[], int n)
+{
+  for(int i=0; i<n;i++)
+  {
+	  cout<<"["<<i<<"]=";
+	  cin>>vec[i];
+  }
+}
+
+void mostrar_vector(int vec[],int n)
+
+{
+  for(int i=0; i<n;i++)
+  {
+	  cout<<"["<<i<<"]=";
+	  cout<<vec[i]<<"\n";
+  }
+}
+void incremento_vector(int vec[],int n)
+{int total;
+ for (int i=0;i<n;i++)
+ {
+	 total=vec[i]*1.10;
+	 cout<<"el incremento es igual a: ";
+	 cout<<total<<"\n";
+ }
+}
+ 
